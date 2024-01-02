@@ -10,9 +10,13 @@ export const userSlice = createSlice({
     reducers: {
         update: (state, action) => {
             state.name = action.payload.name;
-            state.email = action.payload.email
+            state.email = action.payload.email;
         },
-        remove: (state) => (state = {}),
+        remove: (state) => {
+            state.email = null;
+            state.greeting= null;
+            state.name = null;
+        },
         addHello: (state, action) => {
             state.greeting = "Hello  " + action.payload.name
         }
