@@ -4,7 +4,8 @@ export const userSlice = createSlice({
     name: "user",
     initialState: {
         name: "Kelvin",
-        email: "mimiMeyoh@gmail.com"
+        email: "mimiMeyoh@gmail.com",
+        greeting: ""
     },
     reducers: {
         update: (state, action) => {
@@ -13,7 +14,7 @@ export const userSlice = createSlice({
         },
         remove: (state) => (state = {}),
         addHello: (state, action) => {
-            state.name = "Hello  " + action.payload.name
+            state.greeting = "Hello  " + action.payload.name
         }
     },
 });
