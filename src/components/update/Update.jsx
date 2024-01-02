@@ -17,6 +17,8 @@ export default function Update() {
     email: email
   } */ 
 
+  // name and email are in the payload object,
+  // the values are thus accessible to the 'update reducer' in the 'userSlice.js'
   const handleUpdate = (e) => {
     e.preventDefault();
     dispatch(addHello({ name, email }))
