@@ -21,6 +21,7 @@ export default function Update() {
   // the values are thus accessible to the 'update reducer' in the 'userSlice.js'
   const handleUpdate = (e) => {
     e.preventDefault();
+    dispatch(update({name, email}))
     dispatch(addHello({ name, email }))
   }
 
